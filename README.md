@@ -15,7 +15,17 @@ Template starter with React Navigation and Firebase auth using React Context
    npm install --global expo-cli
    ```
 
-3. Download this repo
+3. Download this repo and get .env file with firebase configuration. 
+
+Example: 
+
+```jsx
+F_API_KEY=putyourkeyhere
+F_AUTH_DOMAIN=
+F_STORAGE_BUCKET=
+F_APP_ID=
+```
+
 4. Install deps on your template folder
 
    ```jsx
