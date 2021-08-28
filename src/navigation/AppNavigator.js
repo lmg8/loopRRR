@@ -8,6 +8,7 @@ import {F_API_KEY,F_AUTH_DOMAIN,F_STORAGE_BUCKET,F_APP_ID} from "@env"
 // Main
 import Home from "../screens/Home";
 import SecondScreen from "../screens/SecondScreen";
+import Camera from "../screens/Camera";
 
 // Auth screens
 import Login from "../screens/auth/Login";
@@ -57,6 +58,7 @@ const Main = () => {
     >
       <MainStack.Screen name="Home" component={Home} />
       <MainStack.Screen name="SecondScreen" component={SecondScreen} />
+      <MainStack.Screen name="Camera" component={Camera} />
     </MainStack.Navigator>
   );
 };
