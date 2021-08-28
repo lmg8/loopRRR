@@ -8,7 +8,11 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+./package-lock.json
 
 # macOS
 .DS_Store
-env
+
+#keys
+secret.js
+.env
