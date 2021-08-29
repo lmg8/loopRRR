@@ -59,7 +59,7 @@ const Main = () => {
     >
       <MainStack.Screen name="Home" component={Home} />
       <MainStack.Screen name="MapsScreen" component={MapsScreen}/>
-      {/* <MainStack.Screen name="Camera" component={Camera} /> */}
+      <MainStack.Screen name="Camera" component={Camera} />
     </MainStack.Navigator>
   );
 };
