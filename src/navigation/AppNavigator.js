@@ -17,6 +17,7 @@ import ForgetPassword from "../screens/auth/ForgetPassword";
 
 import Loading from "../screens/utils/Loading";
 import MapsScreen from "../screens/MapsScreen";
+import CameraScreen from "../screens/CameraScreens";
 
 // Better put your these secret keys in .env file
 const firebaseConfig = {
@@ -60,6 +61,7 @@ const Main = () => {
       <MainStack.Screen name="Home" component={Home} />
       <MainStack.Screen name="MapsScreen" component={MapsScreen}/>
       <MainStack.Screen name="Camera" component={Camera} />
+      <MainStack.Screen name="CameraScreen" component={CameraScreen} />
     </MainStack.Navigator>
   );
 };

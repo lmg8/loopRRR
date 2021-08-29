@@ -63,6 +63,7 @@ export default function ({ route, navigation }) {
         }
       };
 
+      // https://handyopinion.com/fetch-nearest-places-in-react-native-using-google-places-api/
       const fetchNearestPlacesFromGoogle = () => {
         console.log(navigation)
         //const latitude = 25.0756; // you can update it with user's latitude & Longitude

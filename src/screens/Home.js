@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
-  TextInput,
   Dimensions
 } from "react-native";
 import { firebase } from '@firebase/app'
@@ -19,7 +18,8 @@ import {
   Section,
   SectionContent,
   useTheme,
-  themeColor
+  themeColor,
+  TextInput
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -65,21 +65,21 @@ export default function ({ navigation }) {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                navigation.navigate("Camera");
+                navigation.navigate("CameraScreen");
               }}
             >
               <Image 
               style={{ height: imageHeight, width: imageWidth }}
               source={require("./../../assets/camera.png")} />
             </TouchableOpacity>
-            <Button
+            {/* <Button
               style={{ marginTop: 10 }}
               text="Go to Camera"
               status="info"
               onPress={() => {
-                navigation.navigate("Camera");
+                navigation.navigate("CameraScreen");
               }}
-            />
+            /> */}
 
             <TextInput
               style={styles.input}
@@ -89,7 +89,7 @@ export default function ({ navigation }) {
               placeholder="Search your item"
             />
 
-            <Button
+            {/* <Button
               text="Recycle Drop-off"
               onPress={() => {
                 //TODO: change this to shelter
@@ -118,7 +118,7 @@ export default function ({ navigation }) {
               style={{
                 marginTop: 10,
               }}
-            />
+            /> */}
             <Button
               status="danger"
               text="Logout"
