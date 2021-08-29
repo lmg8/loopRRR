@@ -1,6 +1,16 @@
-import React from 'react';
-import { View, Linking } from "react-native";
-import * as firebase from "firebase";
+import React from "react";
+import {
+  View,
+  Linking,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  TextInput,
+  Dimensions
+} from "react-native";
+import { firebase } from '@firebase/app'
+//var firebase = require('firebase/app');
+
 import {
   Layout,
   Button,
@@ -13,8 +23,14 @@ import {
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 
+let dimensions = Dimensions.get("window");
+    let imageHeight = Math.round((dimensions.width * 9) / 16);
+    let imageWidth = dimensions.width;
+
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
+  const [text, onChangeText] = React.useState("Search item");
+
   return (
     <Layout>
       <TopNav
@@ -46,6 +62,16 @@ export default function ({ navigation }) {
             <Text fontWeight="bold" style={{ textAlign: "center" }}>
               Welcome to loopRRR, build a sustainable future together
             </Text>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => {
+                navigation.navigate("Camera");
+              }}
+            >
+              <Image 
+              style={{ height: imageHeight, width: imageWidth }}
+              source={require("./../../assets/camera.png")} />
+            </TouchableOpacity>
             <Button
               style={{ marginTop: 10 }}
               text="Go to Camera"
@@ -54,6 +80,15 @@ export default function ({ navigation }) {
                 navigation.navigate("Camera");
               }}
             />
+
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeText}
+              value={text}
+              keyboardType="web-search"
+              placeholder="Search your item"
+            />
+
             <Button
               text="Recycle Drop-off"
               onPress={() => {
@@ -90,3 +125,28 @@ export default function ({ navigation }) {
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  button: {
+    backgroundColor: "#859a9b",
+    borderRadius: 20,
+    padding: 10,
+    marginBottom: 20,
+    shadowColor: "#303838",
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    shadowOpacity: 0.35,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
