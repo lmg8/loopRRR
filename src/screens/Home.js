@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { View, Linking } from "react-native";
 import * as firebase from "firebase";
 import {
@@ -9,7 +9,7 @@ import {
   Section,
   SectionContent,
   useTheme,
-  themeColor,
+  themeColor
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -55,9 +55,20 @@ export default function ({ navigation }) {
               }}
             />
             <Button
-              text="Go to second screen"
+              text="Recycle Drop-off"
               onPress={() => {
-                navigation.navigate("SecondScreen");
+                //TODO: change this to shelter
+                navigation.navigate("MapsScreen", {keyword: '%27recycle%20drop-off%27'});
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
+             <Button
+              text="Donate"
+              onPress={() => {
+                //TODO: change this to shelter
+                navigation.navigate("MapsScreen", {keyword: '%27women%20shelter%27'});
               }}
               style={{
                 marginTop: 10,
