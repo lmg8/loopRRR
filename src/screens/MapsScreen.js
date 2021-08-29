@@ -191,7 +191,8 @@ export default function ({ route, navigation }) {
                 // 'Distance: ' +
                 // distance +
                 // '\n' +
-                'LONG PRESS at the bottom of the pin FOR DIRECTIONS!';
+
+                'Search for secret code! Long press pin for directions!';
             return (
                 <Marker
                 key={idx}
