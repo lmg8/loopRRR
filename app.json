@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "loopRRR",
-		"slug": "expo.dev/@lmg8/loopRRR",
+		"name": "LoopRRR",
+		"slug": "LoopRRR",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
@@ -18,7 +18,7 @@
 			"supportsTablet": true
 		},
 		"android": {
-			"package": "com.femmesfatales.looprrr",
+			"package": "com.femmesfatales.LoopRRR",
 			"versionCode": 1
 		  },
 		"web": {
