@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "firebaseAuthFlow",
-		"slug": "firebaseAuthFlow",
+		"name": "loopRRR",
+		"slug": "expo.dev/@lmg8/loopRRR",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
@@ -17,6 +17,10 @@
 		"ios": {
 			"supportsTablet": true
 		},
+		"android": {
+			"package": "com.femmesfatales.looprrr",
+			"versionCode": 1
+		  },
 		"web": {
 			"favicon": "./assets/favicon.png"
 		}
