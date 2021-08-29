@@ -110,6 +110,16 @@ export default function ({ navigation }) {
               }}
             />
             <Button
+              text="Craft"
+              onPress={() => {
+                //TODO: replace plastic cup with result from cloud vision
+                Linking.openURL('vnd.youtube://results?search_query='+'plastic cup'+'+craft');
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
+            <Button
               status="danger"
               text="Logout"
               onPress={() => {
