@@ -43,24 +43,3 @@ https://github.com/codingki/react-native-expo-template/tree/master/template-with
    expo start
    ```
 
-# Auth Flow
-
-### Firebase Setup
-
-- Set up a new firebase project
-- Go to Authentication and under Sign-in Method enable Email/Password
-- Fill this firebase config to your config inside `./src/navigation/AppNavigator.js`
-
-```jsx
-// Better put your these secret keys in .env file
-const firebaseConfig = {
-	apiKey: '',
-	authDomain: '',
-	databaseURL: '',
-	projectId: '',
-	storageBucket: '',
-	messagingSenderId: '',
-	appId: '',
-};
-```
-
