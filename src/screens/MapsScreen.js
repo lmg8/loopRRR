@@ -23,7 +23,7 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default function ({ route, navigation }) {
   const { keyword } = route.params;
-  const [loading, setLoading] = useState(false);
+  const [hasPlaces, setHasPlaces] = useState(false);
   const {isDarkmode, setTheme} = useTheme();
     const [state, setState] = useState({
         latitude: 0,
@@ -50,7 +50,7 @@ export default function ({ route, navigation }) {
         let { status } = await Location.requestForegroundPermissionsAsync( );
         if (status === 'granted') {
           let location = await Location.getCurrentPositionAsync({});
-          console.log(location);
+          //console.log(location);
           setState(prevState => ({...prevState,
             hasLocationPermission: true,
             latitude: location.coords.latitude,
@@ -72,11 +72,11 @@ export default function ({ route, navigation }) {
         console.log(url);
         fetch(url)
           .then(res => {
-            console.log('got here')
+            //console.log('got here')
             return res.json()
           })
           .then(res => {
-            console.log('got here 1')
+            //console.log('got here 1')
             for(let googlePlace of res.results) {
               var place = {}
               var lat = googlePlace.geometry.location.lat;
@@ -104,6 +104,7 @@ export default function ({ route, navigation }) {
 
               //places.push(place);
               setPlace(prevArray=> [...prevArray, place])
+              setHasPlaces(true);
             }
             // Do your work here with places Array
           })
@@ -164,7 +165,7 @@ export default function ({ route, navigation }) {
           justifyContent: "center",
         }}
       >
-        {state.hasLocationPermission ? (<MapView
+        {hasPlaces ? (<MapView
             style={{height:'100%', width: '100%'}}
             apikey={GOOGLE_MAPS_API_KEY}
             provider="google"
@@ -201,7 +202,7 @@ export default function ({ route, navigation }) {
                 />
             );
             })}
-        </MapView> ) : (<Text>getting your location...</Text>)}
+        </MapView> ) : (<Text>getting your location and nearest places...</Text>)}
         
       </View>
     </Layout>

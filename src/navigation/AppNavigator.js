@@ -3,7 +3,7 @@ import firebase from "firebase/app";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { AuthContext } from "../provider/AuthProvider";
-import {F_API_KEY,F_AUTH_DOMAIN,F_STORAGE_BUCKET,F_APP_ID} from "@env"
+import {FIREBASE_API_KEY,FIREBASE_AUTH_DOMAIN,FIREBASE_STORAGE_BUCKET,FIREBASE_APP_ID} from "@env"
 
 // Main
 import Home from "../screens/Home";
@@ -21,13 +21,13 @@ import CameraScreen from "../screens/CameraScreens";
 
 // Better put your these secret keys in .env file
 const firebaseConfig = {
-  apiKey: `${F_API_KEY}`,
-  authDomain: `${F_AUTH_DOMAIN}`,
+  apiKey: `${FIREBASE_API_KEY}`,
+  authDomain: `${FIREBASE_AUTH_DOMAIN}`,
   databaseURL: "",
   projectId: 'looprrr',
-  storageBucket: `${F_STORAGE_BUCKET}`,
+  storageBucket: `${FIREBASE_STORAGE_BUCKET}`,
   messagingSenderId: "",
-  appId: `${F_APP_ID}`,
+  appId: `${FIREBASE_APP_ID}`,
 };
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
