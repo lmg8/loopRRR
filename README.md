@@ -6,6 +6,8 @@ https://expo.dev/@lmg8/LoopRRR
 
 A hack for sustainability. loopRRR
 
+https://devpost.com/software/looprrr
+
 ## Team members
 Lucia
 Kimlin
@@ -25,15 +27,16 @@ https://github.com/codingki/react-native-expo-template/tree/master/template-with
    ```
 
 3. Download this repo and get .env file with firebase configuration. 
+   Example: 
 
-  Example: 
-
-  ```jsx
-  F_API_KEY=putyourkeyhere
-  F_AUTH_DOMAIN=
-  F_STORAGE_BUCKET=
-  F_APP_ID=
-  ```
+     ```jsx
+      F_API_KEY=AIzaSyCVu0ho8GBjU8xyq6t9pQktLhjsispegJA
+      F_AUTH_DOMAIN=
+      F_STORAGE_BUCKET=
+      F_APP_ID=
+      V_API_KEY=
+      GOOGLE_MAPS_API_KEY=
+     ```
 
 4. Install deps on your template folder
 
