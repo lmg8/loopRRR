@@ -11,10 +11,10 @@ import {
     Button
   } from "react-native-rapi-ui";
 
-  import {V_API_KEY} from "@env";
+  import {VISION_API_KEY} from "@env";
   //https://davidl.fr/blog/google-vision-with-react-native
-const API_KEY = '';
-const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${V_API_KEY}`;
+
+  const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=${VISION_API_KEY}`;
 
 async function callGoogleVisionAsync(image) {
   const body = {

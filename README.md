@@ -30,11 +30,11 @@ https://github.com/codingki/react-native-expo-template/tree/master/template-with
    Example: 
 
      ```jsx
-      F_API_KEY=putyourapikeyhere
-      F_AUTH_DOMAIN=
-      F_STORAGE_BUCKET=
-      F_APP_ID=
-      V_API_KEY=
+      FIREBASE_API_KEY=putyourapikeyhere
+      FIREBASE_AUTH_DOMAIN=
+      FIREBASE_STORAGE_BUCKET=
+      FIREBASE_APP_ID=
+      VISION_API_KEY=
       GOOGLE_MAPS_API_KEY=
      ```
 

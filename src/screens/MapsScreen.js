@@ -12,10 +12,9 @@ import * as Location from 'expo-location';
 import { set } from "react-native-reanimated";
 import MapView, { Marker } from 'react-native-maps';
 import { OpenMapDirections } from 'react-native-navigation-directions';
+import {GOOGLE_MAPS_API_KEY} from "@env";
 
 // https://dev.to/kpete2017/how-to-create-a-restaurant-finder-app-in-react-native-part-2-56gj
-
-const GOOGLE_MAPS_API_KEY = 'AIzaSyBYut1K7BW3AppoNH86tUKw2DYeJRHqt8M';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
